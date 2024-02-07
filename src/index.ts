@@ -19,10 +19,13 @@ class User {
   addProduct(newProduct: Product) {
     this.products.push(newProduct);
   }
-  addProducts(newProducts: Product[]) {
+  addProducts(newProducts: Product) {
     // esto no funciona:
     this.products.push(newProducts);
     // pista: push no suma muchos items (agrega de a uno)
+  }
+  static findProductsBelow(precioBase: number) {
+    return products.filter((producto) => producto.price < precioBase);
   }
 }
 
